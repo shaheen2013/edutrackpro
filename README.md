@@ -1,4 +1,4 @@
-<h3 align="center"><a href="https://github.com/jonecoder/edutrackpro" target="_blank">EduTrackPro</a></h3>
+<h3 align="center"><a href="https://github.com/shaheen2013/edutrackpro" target="_blank">EduTrackPro</a></h3>
 
 # Student Session Tracking System
 
@@ -34,7 +34,7 @@ Follow these steps to set up the project locally:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/jonecoder/edutrackpro.git
+   git clone https://github.com/shaheen2013/edutrackpro.git
    cd edutrackpro
    ```
 
