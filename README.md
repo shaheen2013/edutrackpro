@@ -1,5 +1,5 @@
 <h3 align="center"><a href="https://github.com/jonecoder/edutrackpro" target="_blank">EduTrackPro</a></h3>
-```markdown
+
 # Student Session Tracking System
 
 ## Introduction
