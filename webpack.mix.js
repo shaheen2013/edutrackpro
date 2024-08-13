@@ -2,8 +2,8 @@ const mix = require('laravel-mix');
 const path = require('path');
 const tailwindcss = require('tailwindcss');
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
+mix.js('resources/js/app.js', 'public/build/js')
+    .sass('resources/sass/app.scss', 'public/build/css')
     .webpackConfig({
         resolve: {
             alias: {
