@@ -1,0 +1,46 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: edutrackpro-app
+    restart: always
+    ports:
+      - "8005:80"
+    volumes:
+      - ./:/app
+    depends_on:
+      - mysql
+      - redis
+    networks:
+      - edutrackpro-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: edutrackpro-redis
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    networks:
+      - edutrackpro-network
+
+  mysql:
+    image: mysql:latest
+    container_name: edutrackpro-mysql
+    restart: unless-stopped
+    tty: true
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: "${DB_DATABASE}"
+      MYSQL_ROOT_PASSWORD: "${DB_PASSWORD}"
+    networks:
+      - edutrackpro-network
+
+networks:
+  edutrackpro-network:
+    name: edutrackpro-network
+
+volumes:
+  mysql_data:
+  redis_data:
